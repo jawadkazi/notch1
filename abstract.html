@@ -6,34 +6,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
   <link rel="stylesheet" href="assets/css/main.css" />
+         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo-softy-pinko.css">
   <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 </head>
-<body>  
+<body> 
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="https://www.bcm.edu/people-search/mitchell-frederick-21699"  target="_blank">Frederick Lab</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="code.html">Caller</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="abstract.html">Abstract<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/SeebinJwad/notch1_caller" target="_blank">Repository</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 <!-- One -->
-  <section id="one" class="wrapper">
-    <div class="inner split">
+  <section id="one" class="container pt-4">
       <section>
-        <h2>Abstract of NOTCH1 caller paper:</h2>
-        <p> Quisque ipsum arcu, maximus ut ultricies dictum, auctor nec leo. Quisque pellentesque diam nulla. Morbi eget condimentum massa. Phasellus eget neque pharetra, dapibus metus fringilla, volutpat justo. Cras varius auctor velit, sed blandit orci placerat sed. Etiam non venenatis metus. Vivamus sed sapien id nisl molestie consequat. Maecenas vel lacus at lacus tincidunt convallis. Suspendisse potenti. Nulla commodo lacus eget quam placerat ultricies. In ut arcu massa. Nullam vestibulum sodales augue, id molestie mauris sodales pretium. Cras magna quam, mollis tincidunt accumsan vel, gravida in justo.  </p>
+        <h2>A heuristic algorithm for predicting functional impact of NOTCH1 mutations in cancer.</h2>
+        <p><i>Kazi, J. 1 , Kazi, S, 2 Johnson, F.M., 3 and Frederick, M.J. 4</i> 
+
+          <p>
+NOTCH1 is an evolutionarily conserved gene encoding a transmembrane receptor involved in
+development and cell fate decisions, which is also frequently mutated in human cancer. In Leukemia
+NOTCH1 acts as an oncogene due to activating mutations; whereas in solid squamous carcinomas of the
+head and neck, skin, esophagus, or lung NOTCH1 is a tumor suppressor and mutations are thought to be
+inactivating. Structurally, the human NOTCH1 gene encodes a 2501 amino acid protein with well
+defined discrete domains, including 36 epidermal growth factor-like (EGF) repeats, a heterodimerization
+region (HD), a transmembrane (TM) region, RAM, Ankyrin (ANK), TAD, and C-terminal PEST domains. We
+and others have reported that human Leukemias and solid squamous carcinomas have distinct and non-
+overlapping patterns of NOTCH1 mutations consistent with its dual function of either oncogene or
+tumor suppressor. More recently, our group discovered that head and neck cancer cell lines harboring
+inactivating NOTCH1 mutations were uniquely sensitive to clinical drugs targeting the PI3K pathway,
+which led to opening the first genomic biomarker-driven human clinical in head and neck cancer
+(NCT03740100). In the trial, patients identified as having a potentially inactivating NOTCH1 mutation
+were treated with the PI3K inhibitor Bimiralisib. Because NOTCH1 is a tumor suppressor in head and
+neck cancers, it is frequently difficult to predict whether point mutations found in patient tumors are
+truly inactivating when the mutations don’t prematurely truncate the protein. To have a more
+consistent way of determining patient eligibility for the Bimiralisib trial and predict if NOTCH1 mutations
+are inactivating, we developed a heuristic NOTCH1 mutation caller algorithm. Using the specific cDNA
+codon sequences for the human NOTCH1 gene we calculated all possible point mutations and their SIFT
+or PROVEAN scores to drive the theoretical probability of observing a damaging point mutation in each
+of the different NOTCH1 domains. Next we utilized historical TCGA data for more than 100 different
+NOTCH1 mutations observed in tumors from patients with cancers of the head and neck, esophagus,
+and lung to examine the distribution of mutations with damaging SIFT or PROVEAN scores across each
+NOTCH1 domain to look for non-random enrichment. The binomial formula was used to determine the
+probability of observed outcomes (damaging mutations) and identify specific NOTCH1 domains likely
+selected for during cancer development as opposed to domains where mutations likely happened by
+chance. Applying the same principal to over 500 NOTCH1 mutations observed for Leukemia, we were
+able to construct a heuristic truth table to predict the likelihood that a new point mutation would fall
+into the category of inactivating (i.e. tumor suppressor) verses activating (i.e. oncogene). For alterations
+that were not point mutations, such as frameshifts, theoretical probabilities for observed events were
+calculated with a Poisson distribution to similarly find regions where mutations were non-random. To
+facilitate prediction for functional consequences of NOTCH1 mutations we developed a Python script
+based NOTCH1 caller algorithm that allows users to input an observed NOTCH1 mutation in HGVS
+format and the program maps the mutation to its specified domain and outputs a prediction regarding
+function based on the heuristically built truth table along with patient eligibility for our clinical trial.</p>
+        <p><br><i>
+1 Glenda Dawson High School, Pearland, Texas. kazijawadahmed@gmail.com<br>
+2 School of Natural Sciences, University of Texas, Austin, TX; Sawad.Kazi@utexas.edu<br>
+3 Department of Thoracic/Head &amp; Neck Medical Oncology, The University of Texas MD Anderson Cancer
+Center, Houston 77030, Texas, USA fmjohns@mdanderson.org <br>
+4 Bobby R. Alford Department of Otolaryngology, Baylor College of Medicine, Houston 77030, Texas,
+USA; Mitchell.Frederick@bcm.edu; chuangfeifei@gmail.com</i><br><br></p>
      
       </section>
-      <section class="section padding-top-70 padding-bottom-0">
-      <img src="assets/images/protein.png" class="rounded d-block mx-auto" alt="App" style="height:300px;">
-      </section>
-      <!--
-      <section>
-        <ul class="checklist">
-          <li>NOTCH1 Domain Knowledgebase File</li>
-          <li>Impact on Function</li>
-          <li>Specified Confidence Score</li>
-          <li>30+ Error-handling Callbacks</li>
-          <li>Robust Input Capability</li>
-        </ul>
-      </section>
--->
-    </div>
+      
   </section>
-
 
 
   <!-- Footer -->

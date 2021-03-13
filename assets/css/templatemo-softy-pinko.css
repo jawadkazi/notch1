@@ -1362,7 +1362,7 @@ blog
   line-height: 26px;
   margin-bottom: 15px;
 }
-
+/*
 .blog-post-thumb .post-footer span {
   float: left;
   height: 30px;
@@ -1371,7 +1371,7 @@ blog
   font-size: 14px;
   color: #777;
   padding-left: 30px;
-}
+}*/
 
 .blog-post-thumb a.main-button  {
   margin-top: 10px;
@@ -1441,11 +1441,12 @@ contact
 footer
 --------------------------------------------- 
 */
+/*
 footer {
-  background-image: linear-gradient(127deg, #a759d1 0%, #8261ee 91%);
-  padding-top: 30px;
+ /* background-image: linear-gradient(127deg, #a759d1 0%, #8261ee 91%);*/
+ /* padding-top: 30px;*/
 }
-
+/*
 footer .social {
   overflow: hidden;
   margin-top: 10px;
@@ -1502,7 +1503,7 @@ footer .copyright {
     margin-bottom: 30px;
   }
 }
-
+*/
 /* 
 ---------------------------------------------
 preloader
